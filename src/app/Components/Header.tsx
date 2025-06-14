@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Header() {
@@ -10,21 +11,34 @@ function Header() {
       </div>
       <div className="flex place-items-center w-1/3 justify-center">
         <ul className="flex gap-8 place-items-center">
-          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
-            About Me
-          </li>
-          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
-            Skills
-          </li>
-          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
-            Case Studies
-          </li>
+          <Link href={"/"}>
+            <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
+              Home
+            </li>
+          </Link>
+          <Link href={"/#about"}>
+            <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
+              About Me
+            </li>
+          </Link>
+          <Link href={"/#skills"}>
+            <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
+              Skills
+            </li>
+          </Link>
+          <Link href={"/#casestudies"}>
+            <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
+              Case Studies
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="flex place-items-center w-1/3 justify-end">
-        <p className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
-          hasankhanwebdev@gmail.com
-        </p>
+        <Link href={"mailto:hasankhanwebdev@gmail.com"} target="_blank" rel="noopener noreferrer">
+          <p className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
+            hasankhanwebdev@gmail.com
+          </p>
+        </Link>
       </div>
     </div>
   );

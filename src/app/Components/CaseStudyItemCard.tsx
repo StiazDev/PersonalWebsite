@@ -4,12 +4,14 @@ import React from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 interface IComponentPorps {
   CaseStudyImg: any;
   CompanyName: string;
   Description: string;
   Role: string;
+  CaseStudyLink: string;
 }
 function CaseStudyItemCard(props: IComponentPorps) {
   const [buttonVisible, setButtonVisible] = useState<boolean>(false);
@@ -32,22 +34,24 @@ function CaseStudyItemCard(props: IComponentPorps) {
         <p className="text-base font-normal text-white/85">{props.Description}</p>
       </div>
       <p className="text-base font-medium text-white/90">Role: {props.Role}</p>
-      <motion.button
-        className={
-          "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
-        }
-        initial={{
-          opacity: 0,
-          scale: 0.75,
-        }}
-        animate={
-          buttonVisible
-            ? { opacity: 1, transition: { duration: 0.2 }, scale: 1 }
-            : { opacity: 0, scale: 0.75 }
-        }
-      >
-        Visit {props.CompanyName} <ArrowUpRight size={20} />
-      </motion.button>
+      <Link href={props.CaseStudyLink}>
+        <motion.button
+          className={
+            "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
+          }
+          initial={{
+            opacity: 0,
+            scale: 0.75,
+          }}
+          animate={
+            buttonVisible
+              ? { opacity: 1, transition: { duration: 0.2 }, scale: 1 }
+              : { opacity: 0, scale: 0.75 }
+          }
+        >
+          Visit {props.CompanyName} <ArrowUpRight size={20} />
+        </motion.button>
+      </Link>
     </div>
   );
 }

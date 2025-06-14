@@ -4,3 +4,30 @@ body {
   background-color: #0e0e0e;
   color: #fff;
 }
+
+.case-study-long-image-div {
+  --sb-track-color: #1e1e1e;
+  --sb-thumb-color: #ffde5b;
+  --sb-size: 24px;
+}
+
+.case-study-long-image-div::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.case-study-long-image-div::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 4px;
+}
+
+.case-study-long-image-div::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 12px;
+  border: 8px solid #1e1e1e;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .case-study-long-image-div {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}

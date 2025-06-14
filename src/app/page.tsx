@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div>
       {/* About Me */}
-      <div className="px-[7.5rem] py-20 flex gap-16">
+      <div id="about" className="px-[7.5rem] py-20 flex gap-16">
         <div className="flex gap-8 w-1/2">
           <Image src={PortfolioImg} alt="my-picture" className="w-1/3 h-fit rounded-full" />
           <div className="flex flex-col gap-2">
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </div>
       {/* Skills Section */}
-      <div className="px-[7.5rem] py-20 flex flex-col gap-8">
+      <div id="skills" className="px-[7.5rem] py-20 flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h2 className="font-semibold text-2xl">Skills</h2>
           <p className="font-normal text-base text-white/85">
@@ -108,8 +108,8 @@ export default function Home() {
           <Image src={flutter} alt="flutter" width={64} height={64} />
         </div>
       </div>
-      {/* What I am Learning Section */}
-      <div className="px-[7.5rem] py-20 flex flex-col gap-8">
+      {/* CaseStudies Section */}
+      <div id="casestudies" className="px-[7.5rem] py-20 flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h2 className="font-semibold text-2xl">Case Studies</h2>
           <p className="font-normal text-base text-white/85">
@@ -124,18 +124,21 @@ export default function Home() {
             CompanyName="Colliseam (Formerly Nexus)"
             Description="A Platform which connects young designers & developers to work on projects."
             Role="Front-End Developer, Later Lead Marketer."
+            CaseStudyLink="/colliseam-case-study"
           />
           <CaseStudyItemCard
             CaseStudyImg={ServrBill}
             CompanyName="ServrBill"
             Description="Restaurant Billing Software."
             Role="Full-Stack, Designer, Sales, Founder."
+            CaseStudyLink="/servrbill-case-study"
           />
           <CaseStudyItemCard
             CaseStudyImg={BreakTheSlack}
             CompanyName="BreakTheSlack"
             Description="Task Accountability Software & Community for Aspiring Entrepreneurs."
             Role="Back-End, Designer, Founder, Marketing."
+            CaseStudyLink="/breaktheslack-case-study"
           />
         </div>
       </div>
