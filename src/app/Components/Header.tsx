@@ -10,19 +10,19 @@ function Header() {
       </div>
       <div className="flex place-items-center w-1/3 justify-center">
         <ul className="flex gap-8 place-items-center">
-          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-250">
+          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
             About Me
           </li>
-          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-250">
+          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
             Skills
           </li>
-          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-250">
+          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
             Case Studies
           </li>
         </ul>
       </div>
       <div className="flex place-items-center w-1/3 justify-end">
-        <p className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-250">
+        <p className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
           hasankhanwebdev@gmail.com
         </p>
       </div>
