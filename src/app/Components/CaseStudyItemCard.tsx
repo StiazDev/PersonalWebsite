@@ -49,7 +49,7 @@ function CaseStudyItemCard(props: IComponentPorps) {
               : { opacity: 0, scale: 0.75 }
           }
         >
-          Visit {props.CompanyName} <ArrowUpRight size={20} />
+          Read About {props.CompanyName} <ArrowUpRight size={20} />
         </motion.button>
       </Link>
     </div>

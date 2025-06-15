@@ -33,7 +33,7 @@ function page() {
               Marketing
             </p>
             <Link
-              href={"https://www.breaktheslack.vercel.app/"}
+              href={"https://breaktheslack.vercel.app/"}
               target="_blank"
               rel="noopener noreferrer"
             >
