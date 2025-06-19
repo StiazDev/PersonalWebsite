@@ -1,14 +1,19 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-
+import { motion } from "motion/react";
+import UseAnimations from "react-useanimations";
+import arrowUp from "react-useanimations/lib/arrowUp";
 // Images
 import ServrBillPic from "@/../public/Landing Page/CaseStudy Images/ServrBill CaseStudy Picture.png";
 
 function page() {
   return (
-    <div>
+    <motion.div
+      initial={{ x: "-100vh", opacity: 0 }}
+      animate={{ x: 0, opacity: 1, transition: { type: "spring", stiffness: 80 } }}
+    >
       {/* Intro */}
       <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12">
         <Image
@@ -28,13 +33,17 @@ function page() {
               UI/UX Designer, Sales, Marketing.
             </p>
             <Link href={"https://servr-bill.vercel.app/"} target="_blank" rel="noopener noreferrer">
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.075, ease: "easeInOut" }}
                 className={
                   "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
                 }
               >
-                Visit ServrBill <ArrowUpRight size={20} />
-              </button>
+                Visit ServrBill{" "}
+                <UseAnimations animation={arrowUp} size={24} className="rotate-45" speed={1.15} />
+              </motion.button>
             </Link>
           </div>
           <div className="w-1/3 flex flex-col gap-8">
@@ -63,16 +72,19 @@ function page() {
           CaseStudy is being prepared currently, checkout other casestudes in the meantime {":)"}
         </h1>
         <Link href={"/#casestudies"}>
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.075, ease: "easeInOut" }}
             className={
               "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
             }
           >
-            Case Studies <ArrowUpRight size={20} />
-          </button>
+            Case Studies{" "}
+          </motion.button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

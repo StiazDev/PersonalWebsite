@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
 
 body {
+  font-family: "Barlow Semi Condensed" !important;
   background-color: #0e0e0e;
   color: #fff;
 }

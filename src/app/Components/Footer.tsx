@@ -1,8 +1,15 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GitBranchIcon, Instagram } from "lucide-react";
 import { x, instagram, discord, github } from "@/../public/Social Media Icons";
+import UseAnimations from "react-useanimations";
+import githubfooter from "react-useanimations/lib/github";
+import instagramfooter from "react-useanimations/lib/instagram";
+import linkedinfooter from "react-useanimations/lib/linkedin";
+import twitterfooter from "react-useanimations/lib/twitter";
+import { motion } from "motion/react";
 
 function Footer() {
   return (
@@ -15,72 +22,79 @@ function Footer() {
       </div>
       <div className="w-1/3 h-full flex justify-center place-items-start">
         <ul className="flex flex-col gap-3">
-          <Link href={"/#about"}>
-            <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
-              About Me
-            </li>
+          <Link href={"/book-recommendations"}>
+            <motion.li
+              whileHover={{ letterSpacing: "0.1em", scale: 1.1, horizOriginX: 0 }}
+              transition={{ duration: 0.075, type: "tween" }}
+              className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
+            >
+              Book Recommendations
+            </motion.li>
           </Link>
-          <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
-            Book Recommendations
-          </li>
           <Link href={"/#skills"}>
-            <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
+            <motion.li
+              whileHover={{ letterSpacing: "0.1em", scale: 1.1, horizOriginX: 0 }}
+              transition={{ duration: 0.075, type: "tween" }}
+              className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
+            >
               Skills
-            </li>
+            </motion.li>
           </Link>
           <Link href={"/#casestudies"}>
-            <li className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200">
+            <motion.li
+              whileHover={{ letterSpacing: "0.1em", scale: 1.1, horizOriginX: 0 }}
+              transition={{ duration: 0.075, type: "tween" }}
+              className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
+            >
               Case Studies
-            </li>
+            </motion.li>
           </Link>
         </ul>
       </div>
       <div className="w-1/3 h-full flex flex-col justify-start place-items-end gap-8">
         <h2 className="font-semibold text-xl">Socials</h2>
         <div className="flex gap-8">
-          <Link href={"https://github.com/StiazDev"} target="_blank" rel="noopener noreferrer">
-            <Image
-              src={github}
-              alt="github icon"
-              width={32}
-              height={32}
-              className="opacity-75 hover:opacity-100 duration-200"
-            />
-          </Link>
           <Link
-            href={"https://discord.com/users/722131267449126954"}
+            href={"https://github.com/StiazDev"}
             target="_blank"
             rel="noopener noreferrer"
+            className="rounded-lg hover:bg-white/15 duration-75 p-2"
           >
-            <Image
-              src={discord}
-              alt="discord icon"
-              width={32}
-              height={32}
-              className="opacity-75 hover:opacity-100 duration-200"
+            <UseAnimations animation={githubfooter} size={32} strokeColor="#f0f0f0" speed={1.15} />
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/hasanstiaz/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg hover:bg-white/15 duration-75 p-2"
+          >
+            <UseAnimations
+              animation={linkedinfooter}
+              size={32}
+              strokeColor="#f0f0f0"
+              speed={1.15}
             />
           </Link>
           <Link
             href={"https://www.instagram.com/hasan_stiaz/"}
             target="_blank"
             rel="noopener noreferrer"
+            className="rounded-lg hover:bg-white/15 duration-75 p-2"
           >
-            <Image
-              src={instagram}
-              alt="instagram icon"
-              width={32}
-              height={32}
-              className="opacity-75 hover:opacity-100 duration-200"
+            <UseAnimations
+              animation={instagramfooter}
+              size={32}
+              strokeColor="#f0f0f0"
+              speed={1.15}
             />
           </Link>
-          <Link href={"http://x.com/Hasan_Stiaz"} target="_blank" rel="noopener noreferrer">
-            <Image
-              src={x}
-              alt="x icon"
-              width={32}
-              height={32}
-              className="opacity-75 hover:opacity-100 duration-200"
-            />
+          <Link
+            href={"http://x.com/Hasan_Stiaz"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg hover:bg-white/15 duration-75 p-2"
+          >
+            <UseAnimations animation={twitterfooter} size={32} strokeColor="#f0f0f0" speed={1.15} />
           </Link>
         </div>
       </div>

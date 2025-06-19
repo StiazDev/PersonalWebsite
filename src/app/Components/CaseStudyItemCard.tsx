@@ -2,7 +2,8 @@
 import { useState } from "react";
 import React from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import UseAnimations from "react-useanimations";
+import arrowUp from "react-useanimations/lib/arrowUp";
 import { motion } from "motion/react";
 import Link from "next/link";
 
@@ -12,6 +13,7 @@ interface IComponentPorps {
   Description: string;
   Role: string;
   CaseStudyLink: string;
+  leaveTransition: any;
 }
 function CaseStudyItemCard(props: IComponentPorps) {
   const [buttonVisible, setButtonVisible] = useState<boolean>(false);
@@ -30,26 +32,33 @@ function CaseStudyItemCard(props: IComponentPorps) {
       />
 
       <div className="flex flex-col gap-2">
-        <h2 className="text-base font-semibold text-white">{props.CompanyName}</h2>
-        <p className="text-base font-normal text-white/85">{props.Description}</p>
+        <h2 className="text-base font-semibold text-white leading-[150%] text-pretty tracking-wider">
+          {props.CompanyName}
+        </h2>
+        <p className="text-base font-normal text-white/85 leading-[165%] text-pretty tracking-wider">
+          {props.Description}
+        </p>
       </div>
-      <p className="text-base font-medium text-white/90">Role: {props.Role}</p>
+      <p className="text-base font-medium text-white/90 leading-[165%] text-pretty tracking-wider">
+        Role: {props.Role}
+      </p>
       <Link href={props.CaseStudyLink}>
         <motion.button
           className={
-            "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
+            "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30 leading-[165%] text-pretty tracking-wider"
           }
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.075, ease: "easeInOut" }}
           initial={{
             opacity: 0,
             scale: 0.75,
           }}
-          animate={
-            buttonVisible
-              ? { opacity: 1, transition: { duration: 0.2 }, scale: 1 }
-              : { opacity: 0, scale: 0.75 }
-          }
+          animate={buttonVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.75 }}
+          onClick={props.leaveTransition}
         >
-          Read About {props.CompanyName} <ArrowUpRight size={20} />
+          Read About {props.CompanyName}{" "}
+          <UseAnimations animation={arrowUp} size={24} className="rotate-45" speed={1.15} />
         </motion.button>
       </Link>
     </div>
