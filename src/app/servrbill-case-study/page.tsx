@@ -67,23 +67,30 @@ function page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12">
-        <h1 className="font-bold text-4xl">
-          CaseStudy is being prepared currently, checkout other casestudes in the meantime {":)"}
-        </h1>
-        <Link href={"/#casestudies"}>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.075, ease: "easeInOut" }}
-            className={
-              "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
-            }
-          >
-            Case Studies{" "}
-          </motion.button>
-        </Link>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        viewport={{ once: true }}
+      >
+        <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12">
+          <h1 className="font-bold text-4xl">
+            CaseStudy is being prepared currently, checkout other casestudes in the meantime {":)"}
+          </h1>
+          <Link href={"/#casestudies"}>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.075, ease: "easeInOut" }}
+              className={
+                "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
+              }
+            >
+              Check Out Other Case Studies
+            </motion.button>
+          </Link>
+        </div>
+      </motion.div>
     </motion.div>
   );
 }
