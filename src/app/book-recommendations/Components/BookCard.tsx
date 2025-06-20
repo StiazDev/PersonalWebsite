@@ -13,15 +13,17 @@ interface IComponentPorps {
 }
 function BookCard(props: IComponentPorps) {
   return (
-    <div className="bg-[#222] rounded-lg border border-white/25 px-5 py-3 flex flex-col gap-4">
-      <Image
-        src={props.bookCover}
-        alt={props.bookTitle}
-        width={720}
-        height={1280}
-        className=" w-full aspect-auto h-fit rounded-lg "
-      />
-      <h3 className="font-bold text-xl">{props.bookTitle}</h3>
+    <div className="bg-[#222] rounded-lg border border-white/25 px-5 py-3 flex flex-col gap-4 hover:border-white/75 duration-75 justify-between">
+      <div className="flex flex-col gap-2">
+        <Image
+          src={props.bookCover}
+          alt={props.bookTitle}
+          width={720}
+          height={1280}
+          className=" w-full aspect-auto h-fit rounded-lg "
+        />
+        <h3 className="font-bold text-xl">{props.bookTitle}</h3>
+      </div>
       <Link href={props.bookURL} target="_blank" rel="noopener noreferrer">
         <motion.button
           whileHover={{ scale: 1.1, horizOriginX: 0, vertOriginX: 0 }}

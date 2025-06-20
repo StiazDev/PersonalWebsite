@@ -1,9 +1,15 @@
+"use client";
 import React from "react";
 import BookCard from "./Components/BookCard";
+import { motion } from "motion/react";
 
 function page() {
   return (
-    <div className="flex flex-col px-[7.5rem] py-20 justify-center place-items-center gap-12 h-[70vh]">
+    <motion.div
+      initial={{ x: "-100vh", opacity: 0 }}
+      animate={{ x: 0, opacity: 1, transition: { type: "spring", stiffness: 80 } }}
+      className="flex flex-col px-[7.5rem] py-20 justify-center place-items-center gap-12 h-[70vh]"
+    >
       <h1 className="font-bold text-4xl">
         I haven't picked the best of the best in my collections yet, I will recommend really soon :)
       </h1>
@@ -34,7 +40,7 @@ function page() {
           bookURL="https://www.amazon.com/Think-Grow-Rich-Landmark-Bestseller/dp/1585424331/ref=sr_1_1?dib=eyJ2IjoiMSJ9.g6HxGbWNrXYJ1W09RvSZ_AX09Q_yZ3mrdmCv4rHiXS9CNWFsClj2z3sxwL6JlmOHwVsnvEtEgSD64Nb27SrA7f2iXdeMFK95kIwQD9L-CHlDui_1mPP7aI0eV7jETqo3iqHOrNRCHjtTc0UxMmP4qYQ5T-qbVC-RlYi49oevs_O_2L2TeKi0U7mnVs_CcOA-I45lvlsl2HHdEPQUcNcAE-R4X_pUmtTg-AbmZYoANI8.FLu0OGuwz3WgSB0JLldv7K_9IWARi8HKSNHLGj90jCI&dib_tag=se&keywords=think+%26+grow+rich&qid=1750435108&s=books&sr=1-1"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 
