@@ -8,11 +8,9 @@ function page() {
     <motion.div
       initial={{ x: "-100vh", opacity: 0 }}
       animate={{ x: 0, opacity: 1, transition: { type: "spring", stiffness: 80 } }}
-      className="flex flex-col px-[7.5rem] py-20 justify-center place-items-center gap-12 h-[70vh]"
+      className="flex flex-col px-[7.5rem] py-20 justify-center gap-12 h-[70vh]"
     >
-      <h1 className="font-bold text-4xl">
-        I haven't picked the best of the best in my collections yet, I will recommend really soon :)
-      </h1>
+      <h1 className="font-bold text-4xl">Book Recommendations:</h1>
       <div className="grid grid-cols-5 gap-8">
         <BookCard
           bookCover="https://m.media-amazon.com/images/I/51VFkbM2siL._SY466_.jpg"
