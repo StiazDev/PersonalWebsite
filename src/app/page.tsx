@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import ScrollDown from "react-useanimations/lib/scrollDown";
+import arrowDown from "react-useanimations/lib/arrowDown";
 import arrowUp from "react-useanimations/lib/arrowUp";
 import UseAnimations from "react-useanimations";
 import { Tooltip } from "@heroui/react";
@@ -49,18 +50,18 @@ export default function Home() {
       >
         <div
           id="about"
-          className="px-[7.5rem] py-20 flex gap-16 h-[95vh] md:px-[3.75rem] md:gap-8 xl:px-[5rem] 2xl:px-[7.5rem] "
+          className="px-[7.5rem] py-20 flex gap-16 h-[95vh] md:px-[3.75rem] md:gap-8 xl:px-[5rem] 2xl:px-[7.5rem] 2xs:px-6 2xs:py-10 2xs:flex-col 2xs:h-fit md:flex-row "
         >
-          <div className="w-1/2 min-h-full flex flex-col gap-12 justify-center md:gap-6 2xl:gap-12">
+          <div className="w-1/2 min-h-full flex flex-col gap-12 justify-center md:gap-6 2xl:gap-12 2xs:w-full 2xs:justify-start md:w-1/2">
             <div className="flex flex-col gap-2 md:gap-1 2xl:gap-2">
-              <p className="text-[#FFDE5B] text-base font-medium md:text-sm xl:text-base">
+              <p className="text-[#FFDE5B] text-base font-medium md:text-sm xl:text-base 2xs:text-xs">
                 Hey there
               </p>
               <div className="flex flex-col gap-8 md:gap-4">
-                <h1 className="text-white text-5xl leading-[105%] font-bold md:text-3xl xl:text-4xl 2xl:text-5xl">
+                <h1 className="text-white text-5xl leading-[105%] font-bold md:text-3xl xl:text-4xl 2xl:text-5xl 2xs:text-2xl">
                   I am Hasan Khan, I am a Full-Stack Developer who ships within weeks
                 </h1>
-                <p className="text-white/85 font-normal text-base leading-[165%] text-pretty tracking-wider md:text-sm xl:text-base ">
+                <p className="text-white/85 font-normal text-base leading-[165%] text-pretty tracking-wider md:text-sm xl:text-base 2xs:text-base ">
                   I like to blitz scale the softwares or features I work on, I believe that spending
                   months on something that might has a possibility to not be as great to the company
                   is a waste of time & resources.
@@ -68,7 +69,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex gap-8 md:gap-4 2xl:gap-8">
+            <div className="flex gap-8 md:gap-4 2xl:gap-8 2xs:flex-col 2xs:gap-4 md:flex-row">
               <Link href={"/#casestudies"}>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
@@ -95,12 +96,18 @@ export default function Home() {
                 </motion.button>
               </Link>
             </div>
-            <div className="flex gap-1 place-items-center mt-[8rem] opacity-50 md:mt-10 xl:mt-16">
-              <UseAnimations animation={ScrollDown} size={32} strokeColor="#fff" speed={1.15} />
-              <p className="text-sm font-medium">Scroll Down</p>
+            <div className="flex gap-1 place-items-center mt-[8rem] opacity-50 md:mt-10 xl:mt-16 2xs:mt-4">
+              <div className="flex gap-1 2xs:hidden md:flex">
+                <UseAnimations animation={ScrollDown} size={32} strokeColor="#fff" speed={1.15} />
+                <p className="text-sm font-medium">Scroll Down</p>
+              </div>
+              <div className="flex gap-1 2xs:flex 2xs:place-items-center md:hidden">
+                <UseAnimations animation={arrowDown} size={32} strokeColor="#fff" speed={1.15} />
+                <p className="text-sm font-medium">Swipe Down</p>
+              </div>
             </div>
           </div>
-          <div className="w-1/2 h-full flex place-items-center justify-center">
+          <div className="w-1/2 h-full flex place-items-center justify-center 2xs:hidden md:flex md:w-1/2 md:place-items-center md:min-h-full md:self-center">
             <Image
               src={PortfolioImg}
               alt="Hasan Khan Picture"
@@ -113,7 +120,7 @@ export default function Home() {
       {/* Skills Section */}
       <div
         id="skills"
-        className="px-[7.5rem] py-20 flex flex-col gap-8 md:px-[3.75rem] xl:px-[5rem] 2xl:px-[7.5rem] "
+        className="px-[7.5rem] py-20 flex flex-col gap-8 md:px-[3.75rem] xl:px-[5rem] 2xl:px-[7.5rem] 2xs:px-6 2xs:py-10 "
       >
         <motion.div
           initial={{ opacity: 0, y: -100 }}
@@ -123,11 +130,11 @@ export default function Home() {
           className="flex flex-col gap-8 w-full"
         >
           <div className="flex flex-col gap-2">
-            <h2 className="font-bold text-8xl text-white/35 md:text-5xl xl:text-7xl 2xl:text-8xl">
+            <h2 className="font-bold text-8xl text-white/35 md:text-5xl xl:text-7xl 2xl:text-8xl 2xs:text-3xl">
               Skills
             </h2>
           </div>
-          <div className="grid grid-cols-12 gap-12 md:grid-cols-6 md:gap-16 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 2xl:gap-12 ">
+          <div className="grid grid-cols-12 gap-12 md:grid-cols-6 md:gap-16 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 2xl:gap-12 2xs:grid-cols-3 2xs:gap-16 2xs:justify-center 2xs:place-items-center 2xs:w-fit ">
             <Tooltip
               color="default"
               className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
@@ -229,7 +236,7 @@ export default function Home() {
 
       {/* What I am Learning Section */}
 
-      <div className="px-[7.5rem] py-20 flex flex-col gap-8 md:px-[3.75rem] xl:px-[5rem] 2xl:px-[7.5rem]">
+      <div className="px-[7.5rem] py-20 flex flex-col gap-8 md:px-[3.75rem] xl:px-[5rem] 2xl:px-[7.5rem] 2xs:px-6 2xs:py-10">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -238,11 +245,11 @@ export default function Home() {
           className="flex flex-col gap-8 w-full"
         >
           <div className="flex flex-col gap-2">
-            <h2 className="font-bold text-8xl text-white/35 md:text-5xl xl:text-7xl 2xl:text-8xl">
+            <h2 className="font-bold text-8xl text-white/35 md:text-5xl xl:text-7xl 2xl:text-8xl 2xs:text-3xl">
               What I am currently learning
             </h2>
           </div>
-          <div className="grid grid-cols-12 gap-12 md:grid-cols-6 md:gap-16 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 2xl:gap-12 ">
+          <div className="grid grid-cols-12 gap-12 md:grid-cols-6 md:gap-16 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 2xl:gap-12 2xs:grid-cols-3 2xs:gap-16 2xs:justify-center 2xs:place-items-center 2xs:w-fit  ">
             <Tooltip
               color="default"
               className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
@@ -265,7 +272,7 @@ export default function Home() {
       {/* CaseStudies Section */}
       <div
         id="casestudies"
-        className="px-[7.5rem] py-20 flex flex-col gap-8 md:px-[3.75rem] xl:px-[5rem] 2xl:px-[7.5rem]"
+        className="px-[7.5rem] py-20 flex flex-col gap-8 md:px-[3.75rem] xl:px-[5rem] 2xl:px-[7.5rem] 2xs:px-6 2xs:py-10 "
       >
         <motion.div
           initial={{ opacity: 0, y: -100 }}
@@ -275,11 +282,11 @@ export default function Home() {
           className="flex flex-col gap-8 w-full"
         >
           <div className="flex flex-col gap-2">
-            <h2 className="font-bold text-8xl text-white/35 md:text-5xl xl:text-7xl 2xl:text-8xl">
+            <h2 className="font-bold text-8xl text-white/35 md:text-5xl xl:text-7xl 2xl:text-8xl 2xs:text-3xl">
               Case Studies
             </h2>
           </div>
-          <div className="grid grid-cols-3 gap-12 md:grid-cols-1 md:gap-8 lg:grid-cols-2 lg:gap-10 xl:grid-cols-2 xl:gap-12 2xl:gap-12 2xl:grid-cols-3">
+          <div className="grid grid-cols-3 gap-12 md:grid-cols-1 md:gap-8 lg:grid-cols-2 lg:gap-10 xl:grid-cols-2 xl:gap-12 2xl:gap-12 2xl:grid-cols-3 2xs:grid-cols-1 2xs:gap-16">
             <CaseStudyItemCard
               CaseStudyImg={Colliseam}
               CompanyName="Colliseam (Formerly Nexus)"

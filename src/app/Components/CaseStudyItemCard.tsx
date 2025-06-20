@@ -42,7 +42,7 @@ function CaseStudyItemCard(props: IComponentPorps) {
       <p className="text-base font-medium text-white/90 leading-[165%] text-pretty tracking-wider">
         Role: {props.Role}
       </p>
-      <Link href={props.CaseStudyLink} className="md:hidden lg:block">
+      <Link href={props.CaseStudyLink} className="2xs:hidden lg:block">
         <motion.button
           className={
             "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30 leading-[165%] text-pretty tracking-wider"
@@ -64,7 +64,7 @@ function CaseStudyItemCard(props: IComponentPorps) {
       <Link href={props.CaseStudyLink} className="lg:hidden">
         <motion.button
           className={
-            "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30 leading-[165%] text-pretty tracking-wider"
+            "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30 leading-[165%] text-pretty tracking-wider 2xs:text-xs 2xs:px-4 md:text-base"
           }
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
