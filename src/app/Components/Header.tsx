@@ -18,14 +18,14 @@ function Header() {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ once: false }}
     >
-      <div className="flex gap-5 px-[7.5rem] py-3 border-b border-white/25 place-items-center justify-center bg-[#0e0e0e]">
+      <div className="flex gap-5 px-[7.5rem] py-3 border-b border-white/25 place-items-center justify-center bg-[#0e0e0e] md:px-[3.75rem] md:py-2 md:gap-3 xl:px-[5rem] xl:py-3 2xl:px-[7.5rem] ">
         <div className="flex place-items-center w-1/3 justify-start">
-          <h2 className="font-semibold text-base text-white">
+          <h2 className="font-semibold text-base text-white md:text-sm xl:text-base ">
             Hasan Khan <span className="font-normal text-base text-white/65">AKA HasanStiaz</span>
           </h2>
         </div>
         <div className="flex place-items-center w-1/3 justify-center">
-          <ul className="flex gap-8 place-items-center">
+          <ul className="flex gap-8 place-items-center md:gap-3 xl:gap-6">
             <Link href={"/"}>
               <motion.li
                 whileHover={{
@@ -43,8 +43,8 @@ function Header() {
                 }}
                 className={
                   isHome
-                    ? "font-semibold text-base text-[#FFDE5B] p-3"
-                    : "font-semibold text-base text-white/85 p-3"
+                    ? "font-semibold text-base text-[#FFDE5B] p-3 md:p-1 md:text-sm xl:text-base"
+                    : "font-semibold text-base text-white/85 p-3 md:p-1 md:text-sm xl:text-base"
                 }
               >
                 Home
@@ -61,7 +61,7 @@ function Header() {
                   y: 0,
                   transition: { duration: 0.2, ease: "easeInOut" },
                 }}
-                className="font-semibold text-base text-white/85 p-3"
+                className="font-semibold text-base text-white/85 p-3 md:p-1 md:text-sm xl:text-base"
               >
                 Skills
               </motion.li>
@@ -77,7 +77,7 @@ function Header() {
                   y: 0,
                   transition: { duration: 0.2, ease: "easeInOut" },
                 }}
-                className="font-semibold text-base text-white/85 p-3"
+                className="font-semibold text-base text-white/85 p-3 md:p-1 md:text-sm xl:text-base"
               >
                 Case Studies
               </motion.li>
@@ -90,7 +90,7 @@ function Header() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.075, ease: "easeInOut" }}
-              className="bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
+              className="bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30 md:text-sm md:px-6 md:py-3 xl:px-8 xl:py-3 xl:text-base"
             >
               Let's connect{" "}
               <UseAnimations animation={arrowUp} size={24} className="rotate-45" speed={1.15} />

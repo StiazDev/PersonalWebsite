@@ -47,32 +47,34 @@ export default function Home() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <div id="about" className="px-[7.5rem] py-20 flex gap-16 h-[95vh]">
-          <div className="w-1/2 min-h-full flex flex-col gap-12 justify-center">
-            <div className="flex flex-col gap-2">
-              <p className="text-[#FFDE5B] text-base font-medium">Hey there</p>
-              <div className="flex flex-col gap-8">
-                <h1 className="text-white text-5xl leading-[105%] font-bold">
-                  I am Hasan Khan, I am a Full-Stack Developer who ships softwares & features to
-                  users within weeks
+        <div
+          id="about"
+          className="px-[7.5rem] py-20 flex gap-16 h-[95vh] md:px-[3.75rem] md:gap-8 xl:px-[5rem] 2xl:px-[7.5rem] "
+        >
+          <div className="w-1/2 min-h-full flex flex-col gap-12 justify-center md:gap-6 2xl:gap-12">
+            <div className="flex flex-col gap-2 md:gap-1 2xl:gap-2">
+              <p className="text-[#FFDE5B] text-base font-medium md:text-sm xl:text-base">
+                Hey there
+              </p>
+              <div className="flex flex-col gap-8 md:gap-4">
+                <h1 className="text-white text-5xl leading-[105%] font-bold md:text-3xl xl:text-4xl 2xl:text-5xl">
+                  I am Hasan Khan, I am a Full-Stack Developer who ships within weeks
                 </h1>
-                <p className="text-white/85 font-normal text-base leading-[165%] text-pretty tracking-wider ">
+                <p className="text-white/85 font-normal text-base leading-[165%] text-pretty tracking-wider md:text-sm xl:text-base ">
                   I like to blitz scale the softwares or features I work on, I believe that spending
                   months on something that might has a possibility to not be as great to the company
-                  is a waste of time & resources. This is why I blitz scale, making sure my work is
-                  highly optimized for a large amount of users and the quality of my code is
-                  top-notch.
+                  is a waste of time & resources.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-8">
+            <div className="flex gap-8 md:gap-4 2xl:gap-8">
               <Link href={"/#casestudies"}>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.075, ease: "easeInOut" }}
-                  className="bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
+                  className="bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30 md:text-sm md:px-4 md:py-3 md:text-start xl:px-8 xl:py-3 xl:text-base"
                 >
                   Read My Case Studies
                 </motion.button>
@@ -86,14 +88,14 @@ export default function Home() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.075, ease: "easeInOut" }}
-                  className="bg-[#FFDE5B] px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#F5C400] hover:text-black duration-200 z-30"
+                  className="bg-[#FFDE5B] px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#F5C400] hover:text-black duration-200 z-30 md:text-sm md:px-4 md:py-3 md:text-start xl:px-8 xl:py-3 xl:text-base"
                 >
                   Let's connect{" "}
                   <UseAnimations animation={arrowUp} size={24} className="rotate-45" speed={1.15} />
                 </motion.button>
               </Link>
             </div>
-            <div className="flex gap-1 place-items-center mt-[8rem] opacity-50">
+            <div className="flex gap-1 place-items-center mt-[8rem] opacity-50 md:mt-10 xl:mt-16">
               <UseAnimations animation={ScrollDown} size={32} strokeColor="#fff" speed={1.15} />
               <p className="text-sm font-medium">Scroll Down</p>
             </div>
@@ -109,7 +111,10 @@ export default function Home() {
       </motion.div>
 
       {/* Skills Section */}
-      <div id="skills" className="px-[7.5rem] py-20 flex flex-col gap-8">
+      <div
+        id="skills"
+        className="px-[7.5rem] py-20 flex flex-col gap-8 md:px-[3.75rem] xl:px-[5rem] 2xl:px-[7.5rem] "
+      >
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -118,12 +123,14 @@ export default function Home() {
           className="flex flex-col gap-8 w-full"
         >
           <div className="flex flex-col gap-2">
-            <h2 className="font-bold text-8xl text-white/35">Skills</h2>
+            <h2 className="font-bold text-8xl text-white/35 md:text-5xl xl:text-7xl 2xl:text-8xl">
+              Skills
+            </h2>
           </div>
-          <div className="grid grid-cols-12 gap-12">
+          <div className="grid grid-cols-12 gap-12 md:grid-cols-6 md:gap-16 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 2xl:gap-12 ">
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="TypeScript"
             >
@@ -132,7 +139,7 @@ export default function Home() {
 
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="TailwindCSS"
             >
@@ -140,7 +147,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="Next.js"
             >
@@ -148,7 +155,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="Supabase"
             >
@@ -156,7 +163,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="PostgreSQL"
             >
@@ -164,7 +171,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="HTML"
             >
@@ -172,7 +179,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="CSS"
             >
@@ -180,7 +187,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="Vercel"
             >
@@ -188,7 +195,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="Figma"
             >
@@ -196,7 +203,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="Github"
             >
@@ -210,7 +217,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="Git"
             >
@@ -222,7 +229,7 @@ export default function Home() {
 
       {/* What I am Learning Section */}
 
-      <div id="skills" className="px-[7.5rem] py-20 flex flex-col gap-8">
+      <div className="px-[7.5rem] py-20 flex flex-col gap-8 md:px-[3.75rem] xl:px-[5rem] 2xl:px-[7.5rem]">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -231,12 +238,14 @@ export default function Home() {
           className="flex flex-col gap-8 w-full"
         >
           <div className="flex flex-col gap-2">
-            <h2 className="font-bold text-8xl text-white/35">What I am currently learning</h2>
+            <h2 className="font-bold text-8xl text-white/35 md:text-5xl xl:text-7xl 2xl:text-8xl">
+              What I am currently learning
+            </h2>
           </div>
-          <div className="grid grid-cols-12 gap-12">
+          <div className="grid grid-cols-12 gap-12 md:grid-cols-6 md:gap-16 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 2xl:gap-12 ">
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="Electron"
             >
@@ -244,7 +253,7 @@ export default function Home() {
             </Tooltip>
             <Tooltip
               color="default"
-              className="bg-[#222] p-3 font-medium text-sm border border-white/15"
+              className="bg-[#222] p-3 font-medium text-sm border border-white/15 md:text-sm md:p-2"
               placement={"bottom"}
               content="Flutter"
             >
@@ -254,7 +263,10 @@ export default function Home() {
         </motion.div>
       </div>
       {/* CaseStudies Section */}
-      <div id="casestudies" className="px-[7.5rem] py-20 flex flex-col gap-8">
+      <div
+        id="casestudies"
+        className="px-[7.5rem] py-20 flex flex-col gap-8 md:px-[3.75rem] xl:px-[5rem] 2xl:px-[7.5rem]"
+      >
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -263,9 +275,11 @@ export default function Home() {
           className="flex flex-col gap-8 w-full"
         >
           <div className="flex flex-col gap-2">
-            <h2 className="font-bold text-8xl text-white/35">Case Studies</h2>
+            <h2 className="font-bold text-8xl text-white/35 md:text-5xl xl:text-7xl 2xl:text-8xl">
+              Case Studies
+            </h2>
           </div>
-          <div className="grid grid-cols-3 gap-12">
+          <div className="grid grid-cols-3 gap-12 md:grid-cols-1 md:gap-8 lg:grid-cols-2 lg:gap-10 xl:grid-cols-2 xl:gap-12 2xl:gap-12 2xl:grid-cols-3">
             <CaseStudyItemCard
               CaseStudyImg={Colliseam}
               CompanyName="Colliseam (Formerly Nexus)"
