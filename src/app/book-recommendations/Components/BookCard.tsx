@@ -29,7 +29,7 @@ function BookCard(props: IComponentPorps) {
           whileHover={{ scale: 1.1, horizOriginX: 0, vertOriginX: 0 }}
           whileTap={{ scale: 0.95, horizOriginX: 0, vertOriginX: 0 }}
           transition={{ duration: 0.075, ease: "easeInOut" }}
-          className="flex gap-2 place-items-center px-3 py-1 bg-white rounded-full text-black w-fit font-medium text-base hover:bg-[#FFDE5B] hover:text-black duration-200 "
+          className="flex gap-2 place-items-center px-3 py-1 bg-white rounded-full text-black w-fit font-medium text-base hover:bg-[#FFDE5B] hover:text-black duration-200 2xs:px-8 2xs:py-4 "
         >
           Read This Book{" "}
           <UseAnimations animation={arrowUp} size={24} className="rotate-45" speed={1.15} />

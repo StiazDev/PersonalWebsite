@@ -18,15 +18,15 @@ function page() {
       animate={{ x: 0, opacity: 1, transition: { type: "spring", stiffness: 80 } }}
     >
       {/* Intro */}
-      <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12 md:px-[3.75rem] md:gap-8 xl:px-[5rem] 2xl:px-[7.5rem] 2xl:gap-12">
+      <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12 md:px-[3.75rem] md:gap-8 xl:px-[5rem] 2xl:px-[7.5rem] 2xl:gap-12 2xs:px-6 2xs:py-10 ">
         <Image
           src={ColliseamPic}
           alt="Header Photo"
-          className="w-3/4 h-fit aspect-video rounded-lg md:w-full xl:w-3/4"
+          className="w-3/4 h-fit aspect-video rounded-lg md:w-full xl:w-3/4 2xs:w-full"
         />
-        <div className="w-full flex gap-12 md:flex-col md:gap-16 lg:flex-row lg:gap-8 2xl:gap-12">
-          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8">
-            <div className="flex flex-col gap-2 md:gap-1 xl:gap-2">
+        <div className="w-full flex gap-12 md:flex-col md:gap-16 lg:flex-row lg:gap-8 2xl:gap-12 2xs:flex-col 2xs:gap-16">
+          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8 2xs:w-full 2xs:gap-4">
+            <div className="flex flex-col gap-2 md:gap-1 xl:gap-2 2xs:gap-1">
               <h2 className="font-bold text-base">Colliseam (Formerly Nexus)</h2>
               <p className="font-normal text-base text-white/75">September 2024 - April 2025</p>
             </div>
@@ -48,7 +48,7 @@ function page() {
               </motion.button>
             </Link>
           </div>
-          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8">
+          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8 2xs:w-full 2xs:gap-4">
             <p className="font-normal text-base text-white/75">
               Colliseam is a platform which connects young developers and designer so they can
               collaborate on projects and build a portfolio and learn skills.
@@ -57,7 +57,7 @@ function page() {
               <span className="font-bold text-white/90">Company Size:</span> 9 people.
             </p>
           </div>
-          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8">
+          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8 2xs:w-full 2xs:gap-4">
             <p className="font-normal text-base text-white/75">
               Implemented UI in Next.JS which was pixel perfect to the design. Worked closely with
               the Product manager and the founder.
@@ -78,8 +78,8 @@ function page() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <div className="flex gap-20 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-10 md:flex-col-reverse lg:flex-row xl:px-[5rem] xl:gap-14 2xl:px-[7.5rem] 2xl:gap-20 ">
-          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2 ">
+        <div className="flex gap-20 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-10 md:flex-col-reverse lg:flex-row xl:px-[5rem] xl:gap-14 2xl:px-[7.5rem] 2xl:gap-20 2xs:px-6 2xs:py-10 2xs:flex-col-reverse ">
+          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2 2xs:w-full 2xs:gap-16 ">
             <div className="flex flex-col gap-2">
               <h2 className="font-bold text-2xl">Landing Page</h2>
               <p className="font-normal text-base text-white/75">
@@ -130,7 +130,7 @@ function page() {
               </p>
             </div>
           </div>
-          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2">
+          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2 2xs:w-full 2xs:gap-16">
             <Image
               src={CaseStudyImg1}
               alt="Colliseam Landing Page"
@@ -146,8 +146,8 @@ function page() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <div className="flex gap-20 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-10 md:flex-col-reverse lg:flex-row xl:px-[5rem] xl:gap-14 2xl:px-[7.5rem] 2xl:gap-20 ">
-          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2  ">
+        <div className="flex gap-20 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-10 md:flex-col-reverse lg:flex-row xl:px-[5rem] xl:gap-14 2xl:px-[7.5rem] 2xl:gap-20 2xs:px-6 2xs:py-10 2xs:flex-col-reverse ">
+          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2 2xs:w-full 2xs:gap-16  ">
             <div className="flex flex-col gap-2">
               <h2 className="font-bold text-2xl">Messages Page:</h2>
               <p className="font-normal text-base text-white/75">
@@ -162,7 +162,7 @@ function page() {
               </p>
             </div>
           </div>
-          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2  ">
+          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2 2xs:w-full 2xs:gap-16  ">
             <Image
               src={CaseStudyImg2}
               alt="Colliseam Messages Page"
@@ -172,7 +172,7 @@ function page() {
         </div>
       </motion.div>
       {/* Summary */}
-      <div className="flex gap-12 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-6 xl:px-[5rem] xl:gap-8 2xl:px-[7.5rem] 2xl:gap-12 ">
+      <div className="flex gap-12 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-6 xl:px-[5rem] xl:gap-8 2xl:px-[7.5rem] 2xl:gap-12 2xs:px-6 2xs:py-10  ">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -195,14 +195,13 @@ function page() {
         </motion.div>
       </div>
       {/* Skills Learned: */}
-      <div className="flex gap-12 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-6 xl:px-[5rem] xl:gap-8 2xl:px-[7.5rem] 2xl:gap-12 ">
+      <div className="flex gap-12 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-6 xl:px-[5rem] xl:gap-8 2xl:px-[7.5rem] 2xl:gap-12 2xs:px-6 2xs:py-10  ">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          {" "}
           <div className="flex flex-col gap-12 ">
             <div className="flex flex-col gap-2">
               <h2 className="font-bold text-2xl">Skills Learned:</h2>
