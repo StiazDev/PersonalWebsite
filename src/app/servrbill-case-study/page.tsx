@@ -15,15 +15,15 @@ function page() {
       animate={{ x: 0, opacity: 1, transition: { type: "spring", stiffness: 80 } }}
     >
       {/* Intro */}
-      <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12">
+      <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12 md:px-[3.75rem] md:gap-8 xl:px-[5rem] 2xl:px-[7.5rem] 2xl:gap-12">
         <Image
           src={ServrBillPic}
           alt="Header Photo"
-          className="w-3/4 h-fit aspect-video rounded-lg"
+          className="w-3/4 h-fit aspect-video rounded-lg md:w-full xl:w-3/4"
         />
-        <div className="w-full flex gap-12">
-          <div className="w-1/3 flex flex-col gap-8">
-            <div className="flex flex-col gap-2">
+        <div className="w-full flex gap-12 md:flex-col md:gap-16 lg:flex-row lg:gap-8 2xl:gap-12">
+          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8">
+            <div className="flex flex-col gap-2 md:gap-1 xl:gap-2">
               <h2 className="font-bold text-base">ServrBill</h2>
               <p className="font-normal text-base text-white/75">May 2025 - Present</p>
             </div>
@@ -38,7 +38,7 @@ function page() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.075, ease: "easeInOut" }}
                 className={
-                  "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
+                  "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30 md:text-sm md:px-6 md:py-3 xl:px-8 xl:py-3 xl:text-base"
                 }
               >
                 Visit ServrBill{" "}
@@ -46,7 +46,7 @@ function page() {
               </motion.button>
             </Link>
           </div>
-          <div className="w-1/3 flex flex-col gap-8">
+          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8">
             <p className="font-normal text-base text-white/75">
               ServrBill is a Restaurant Management Software. It simplifies the process of billing
               and calculates the profits so you don't have to touch your messy register ever again.
@@ -55,7 +55,7 @@ function page() {
               <span className="font-bold text-white/90">Company Size:</span> 1 person.
             </p>
           </div>
-          <div className="w-1/3 flex flex-col gap-8">
+          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8">
             <p className="font-normal text-base text-white/75">
               Implemented Front-End in NextJS with Hero UI and TailwindCSS. Designed UI in Figma,
               Backend & Database in Supabase (using PostgreSQL). Sold to real restaurants.
@@ -73,8 +73,8 @@ function page() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12">
-          <h1 className="font-bold text-4xl">
+        <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12 md:px-[3.75rem] md:gap-8 md:place-items-start lg:place-items-center xl:px-[5rem] 2xl:xl-[7.5rem] 2xl:gap-12">
+          <h1 className="font-bold text-4xl md:text-2xl md:text-start md:w-fit lg:text-center xl:text-3xl 2xl:text-4xl">
             CaseStudy is being prepared currently, checkout other casestudes in the meantime {":)"}
           </h1>
           <Link href={"/#casestudies"}>
@@ -83,7 +83,7 @@ function page() {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.075, ease: "easeInOut" }}
               className={
-                "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
+                "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30 md:text-sm md:px-6 md:py-3 xl:px-8 xl:py-3 xl:text-base"
               }
             >
               Check Out Other Case Studies

@@ -68,6 +68,12 @@ function Header() {
                     className="bg-white px-8 py-3 rounded-full font-semibold text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] active:bg-[#FFDE5B] hover:text-black duration-200 z-30 "
                   >
                     Let's Connect
+                    <UseAnimations
+                      animation={arrowUp}
+                      size={24}
+                      className="rotate-45"
+                      speed={1.15}
+                    />
                   </motion.button>
                 </Link>
               </NavbarMenuItem>

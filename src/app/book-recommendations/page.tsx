@@ -8,10 +8,12 @@ function page() {
     <motion.div
       initial={{ x: "-100vh", opacity: 0 }}
       animate={{ x: 0, opacity: 1, transition: { type: "spring", stiffness: 80 } }}
-      className="flex flex-col px-[7.5rem] py-20 justify-center gap-12 h-[70vh]"
+      className="flex flex-col px-[7.5rem] py-20 justify-center gap-12 min-h-[70vh] md:px-[3.75rem] md:gap-8 xl:px-[5rem] 2xl:px-[7.5rem] 2xl:gap-12"
     >
-      <h1 className="font-bold text-4xl">Book Recommendations:</h1>
-      <div className="grid grid-cols-5 gap-8">
+      <h1 className="font-bold text-4xl md:text-2xl md:text-start md:w-fit lg:text-center xl:text-3xl 2xl:text-4xl">
+        Book Recommendations:
+      </h1>
+      <div className="grid grid-cols-5 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5">
         <BookCard
           bookCover="https://m.media-amazon.com/images/I/51VFkbM2siL._SY466_.jpg"
           bookTitle="The Almanack of Naval Ravikant"

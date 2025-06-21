@@ -20,15 +20,15 @@ function page() {
       animate={{ x: 0, opacity: 1, transition: { type: "spring", stiffness: 80 } }}
     >
       {/* Intro */}
-      <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12">
+      <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12 md:px-[3.75rem] md:gap-8 xl:px-[5rem] 2xl:px-[7.5rem] 2xl:gap-12">
         <Image
           src={BreakTheSlackPic}
           alt="Header Photo"
-          className="w-3/4 h-fit aspect-video rounded-lg"
+          className="w-3/4 h-fit aspect-video rounded-lg md:w-full xl:w-3/4"
         />
-        <div className="w-full flex gap-12">
-          <div className="w-1/3 flex flex-col gap-8">
-            <div className="flex flex-col gap-2">
+        <div className="w-full flex gap-12 md:flex-col md:gap-16 lg:flex-row lg:gap-8 2xl:gap-12">
+          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8">
+            <div className="flex flex-col gap-2 md:gap-1 xl:gap-2">
               <h2 className="font-bold text-base">BreakTheSlack</h2>
               <p className="font-normal text-base text-white/75">March 2025 - May 2025</p>
             </div>
@@ -47,7 +47,7 @@ function page() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.1, ease: "easeInOut" }}
                 className={
-                  "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30"
+                  "bg-white px-8 py-3 rounded-full font-semibold text-base text-black flex gap-2 place-items-center w-fit cursor-pointer hover:bg-[#FFDE5B] hover:text-black duration-200 z-30 md:text-sm md:px-6 md:py-3 xl:px-8 xl:py-3 xl:text-base"
                 }
               >
                 Visit BreakTheSlack{" "}
@@ -55,7 +55,7 @@ function page() {
               </motion.button>
             </Link>
           </div>
-          <div className="w-1/3 flex flex-col gap-8">
+          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8">
             <p className="font-normal text-base text-white/75">
               BreakTheSlack is a accountability software for aspiring entrepreneurs. It helps them
               make progress every day by helping them have clarity and finish their most important 3
@@ -65,7 +65,7 @@ function page() {
               <span className="font-bold text-white/90">Company Size:</span> 3 people.
             </p>
           </div>
-          <div className="w-1/3 flex flex-col gap-8">
+          <div className="w-1/3 flex flex-col gap-8 md:w-full md:gap-4 lg:w-1/3 lg:gap-6 2xl:gap-8">
             <p className="font-normal text-base text-white/75">
               Validated the idea of BreakTheSlack and wrote the entire software’s back-end. From
               Auth to systems like streaks & streak history. Designed the Landing page and entire UI
@@ -87,8 +87,8 @@ function page() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <div className="flex gap-20 px-[7.5rem] py-20">
-          <div className=" w-1/2 flex flex-col gap-12 ">
+        <div className="flex gap-20 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-10 md:flex-col-reverse lg:flex-row xl:px-[5rem] xl:gap-14 2xl:px-[7.5rem] 2xl:gap-20 ">
+          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2  ">
             <div className="flex flex-col gap-2">
               <h2 className="font-bold text-2xl">Dashboard:</h2>
               <p className="font-normal text-base text-white/75">
@@ -124,7 +124,7 @@ function page() {
               </p>
             </div>
           </div>
-          <div className=" w-1/2 flex flex-col gap-12">
+          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2 ">
             <Image
               src={CaseStudyImg1}
               alt="BreakTheSlack Dashboard"
@@ -141,8 +141,8 @@ function page() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <div className="flex gap-20 px-[7.5rem] py-20">
-          <div className=" w-1/2 flex flex-col gap-12 ">
+        <div className="flex gap-20 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-10 md:flex-col-reverse lg:flex-row xl:px-[5rem] xl:gap-14 2xl:px-[7.5rem] 2xl:gap-20 ">
+          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2  ">
             <div className="flex flex-col gap-2">
               <h2 className="font-bold text-2xl">Streaks System:</h2>
               <p className="font-normal text-base text-white/75">
@@ -207,7 +207,7 @@ function page() {
               might never be finished. I’ll always add something to improve it.)
             </p>
           </div>
-          <div className=" w-1/2 flex flex-col gap-12 place-items-center ">
+          <div className=" w-1/2 flex flex-col gap-12 place-items-center md:w-full lg:w-1/2  ">
             <Image
               src={CaseStudyImg2}
               alt="BreakTheSlack Sreak History Page"
@@ -224,8 +224,8 @@ function page() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <div className="flex gap-20 px-[7.5rem] py-20">
-          <div className=" w-1/2 flex flex-col gap-12 ">
+        <div className="flex gap-20 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-10 md:flex-col-reverse lg:flex-row xl:px-[5rem] xl:gap-14 2xl:px-[7.5rem] 2xl:gap-20 ">
+          <div className=" w-1/2 flex flex-col gap-12 md:w-full lg:w-1/2  ">
             <div className="flex flex-col gap-2">
               <h2 className="font-bold text-2xl">Milestones:</h2>
               <p className="font-normal text-base text-white/75">
@@ -267,7 +267,7 @@ function page() {
               </p>
             </div>
           </div>
-          <div className=" w-1/2 flex flex-col gap-12 place-items-center ">
+          <div className=" w-1/2 flex flex-col gap-12 place-items-center md:w-full lg:w-1/2  ">
             <Image
               src={CaseStudyImg5}
               alt="BreakTheSlack Milestones Page"
@@ -284,7 +284,7 @@ function page() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <div className="flex gap-12 px-[7.5rem] py-20">
+        <div className="flex gap-12 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-6 xl:px-[5rem] xl:gap-8 2xl:px-[7.5rem] 2xl:gap-12 ">
           <div className="flex flex-col gap-12 ">
             <div className="flex flex-col gap-2">
               <h2 className="font-bold text-2xl">Summary:</h2>
@@ -333,7 +333,7 @@ function page() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <div className="flex gap-12 px-[7.5rem] py-20">
+        <div className="flex gap-12 px-[7.5rem] py-20 md:px-[3.75rem] md:gap-6 xl:px-[5rem] xl:gap-8 2xl:px-[7.5rem] 2xl:gap-12 ">
           <div className="flex flex-col gap-12 ">
             <div className="flex flex-col gap-2">
               <h2 className="font-bold text-2xl">Skills Learned:</h2>
