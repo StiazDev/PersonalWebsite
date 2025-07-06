@@ -37,8 +37,8 @@ export default function Home() {
       initial={{ x: "-100vh", opacity: 0 }}
       animate={
         homeHere
-          ? { x: 0, opacity: 1, transition: { type: "spring", stiffness: 80 } }
-          : { x: "100vh", opacity: 0, transition: { type: "spring", stiffness: 80 } }
+          ? { x: 0, opacity: 1, transition: { type: "tween", duration: 0.3 } }
+          : { x: "100vh", opacity: 0, transition: { type: "tween", duration: 0.3 } }
       }
     >
       {/* About Me */}

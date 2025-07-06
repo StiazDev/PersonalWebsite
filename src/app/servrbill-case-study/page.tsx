@@ -12,7 +12,7 @@ function page() {
   return (
     <motion.div
       initial={{ x: "-100vh", opacity: 0 }}
-      animate={{ x: 0, opacity: 1, transition: { type: "spring", stiffness: 80 } }}
+      animate={{ x: 0, opacity: 1, transition: { type: "tween", duration: 0.3 } }}
     >
       {/* Intro */}
       <div className="flex flex-col px-[7.5rem] py-20 justify-start place-items-center gap-12 md:px-[3.75rem] md:gap-8 xl:px-[5rem] 2xl:px-[7.5rem] 2xl:gap-12 2xs:px-6 2xs:py-10">
