@@ -10,8 +10,10 @@ import instagramfooter from "react-useanimations/lib/instagram";
 import linkedinfooter from "react-useanimations/lib/linkedin";
 import twitterfooter from "react-useanimations/lib/twitter";
 import { motion } from "motion/react";
+import { usePathname } from "next/navigation";
 
 function Footer() {
+  let pathname = usePathname();
   return (
     <div className="flex gap-20 px-[7.5rem] py-20 border-b border-white/25 justify-center bg-[#141414] w-full md:px-[3.75rem] md:gap-16 md:flex-col md:justify-center lg:flex-row xl:px-[5rem] 2xl:px-[7.5rem] 2xs:flex-col 2xs:px-6">
       <div className="w-1/3 h-full flex justify-start place-items-start md:w-full md:justify-start md:place-items-start 2xs:w-full">
@@ -27,7 +29,11 @@ function Footer() {
             <motion.li
               whileHover={{ letterSpacing: "0.1em", scale: 1.1, horizOriginX: 0 }}
               transition={{ duration: 0.075, type: "tween" }}
-              className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
+              className={
+                pathname == "/book-recommendations"
+                  ? "font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
+                  : "font-semibold text-base text-[#FFDE5B] hover:text-[#FFDE5B] duration-200 py-2 px-1"
+              }
             >
               Book Recommendations
             </motion.li>
@@ -36,7 +42,11 @@ function Footer() {
             <motion.li
               whileHover={{ letterSpacing: "0.1em", scale: 1.1, horizOriginX: 0 }}
               transition={{ duration: 0.075, type: "tween" }}
-              className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
+              className={
+                pathname == "/#skills"
+                  ? "font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
+                  : "font-semibold text-base text-[#FFDE5B] hover:text-[#FFDE5B] duration-200 py-2 px-1"
+              }
             >
               Skills
             </motion.li>
@@ -45,7 +55,11 @@ function Footer() {
             <motion.li
               whileHover={{ letterSpacing: "0.1em", scale: 1.1, horizOriginX: 0 }}
               transition={{ duration: 0.075, type: "tween" }}
-              className="font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
+              className={
+                pathname == "/#casestudies"
+                  ? "font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
+                  : "font-semibold text-base text-[#FFDE5B] hover:text-[#FFDE5B] duration-200 py-2 px-1"
+              }
             >
               Case Studies
             </motion.li>
