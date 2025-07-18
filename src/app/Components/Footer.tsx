@@ -31,8 +31,8 @@ function Footer() {
               transition={{ duration: 0.075, type: "tween" }}
               className={
                 pathname == "/book-recommendations"
-                  ? "font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
-                  : "font-semibold text-base text-[#FFDE5B] hover:text-[#FFDE5B] duration-200 py-2 px-1"
+                  ? "font-semibold text-base text-[#FFDE5B] hover:text-[#FFDE5B] duration-200 py-2 px-1"
+                  : "font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
               }
             >
               Book Recommendations
@@ -44,8 +44,8 @@ function Footer() {
               transition={{ duration: 0.075, type: "tween" }}
               className={
                 pathname == "/#skills"
-                  ? "font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
-                  : "font-semibold text-base text-[#FFDE5B] hover:text-[#FFDE5B] duration-200 py-2 px-1"
+                  ? "font-semibold text-base text-[#FFDE5B] hover:text-[#FFDE5B] duration-200 py-2 px-1"
+                  : "font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
               }
             >
               Skills
@@ -57,8 +57,8 @@ function Footer() {
               transition={{ duration: 0.075, type: "tween" }}
               className={
                 pathname == "/#casestudies"
-                  ? "font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
-                  : "font-semibold text-base text-[#FFDE5B] hover:text-[#FFDE5B] duration-200 py-2 px-1"
+                  ? "font-semibold text-base text-[#FFDE5B] hover:text-[#FFDE5B] duration-200 py-2 px-1"
+                  : "font-semibold text-base text-white/85 hover:text-[#FFDE5B] duration-200 py-2 px-1"
               }
             >
               Case Studies
