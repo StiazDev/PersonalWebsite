@@ -33,7 +33,11 @@ function Header() {
               <Link href={"/"} onClick={() => setIsMenuOpen(false)}>
                 <NavbarMenuItem
                   key={"home"}
-                  className="text-white font-semibold text-2xl active:text-[#FFDE5B] duration-200"
+                  className={
+                    pathname == "/"
+                      ? "text-white font-semibold text-2xl active:text-[#FFDE5B] duration-200"
+                      : "text-[#FFDE5B] font-semibold text-2xl active:text-[#FFDE5B] duration-200"
+                  }
                 >
                   Home
                 </NavbarMenuItem>
@@ -41,7 +45,11 @@ function Header() {
               <Link href={"/#skills"} onClick={() => setIsMenuOpen(false)}>
                 <NavbarMenuItem
                   key={"skills"}
-                  className="text-white font-semibold text-2xl active:text-[#FFDE5B] duration-200"
+                  className={
+                    pathname == "/#skills"
+                      ? "text-white font-semibold text-2xl active:text-[#FFDE5B] duration-200"
+                      : "text-[#FFDE5B] font-semibold text-2xl active:text-[#FFDE5B] duration-200"
+                  }
                 >
                   Skills
                 </NavbarMenuItem>
@@ -49,7 +57,11 @@ function Header() {
               <Link href={"/#casestudies"} onClick={() => setIsMenuOpen(false)}>
                 <NavbarMenuItem
                   key={"case-studies"}
-                  className="text-white font-semibold text-2xl active:text-[#FFDE5B] duration-200"
+                  className={
+                    pathname == "/#casestudies"
+                      ? "text-white font-semibold text-2xl active:text-[#FFDE5B] duration-200"
+                      : "text-[#FFDE5B] font-semibold text-2xl active:text-[#FFDE5B] duration-200"
+                  }
                 >
                   Case Studies
                 </NavbarMenuItem>
@@ -103,7 +115,7 @@ function Header() {
                   transition: { ease: "easeInOut", duration: 0.1 },
                 }}
                 className={
-                  isHome
+                  pathname == "/"
                     ? "font-semibold text-base text-[#FFDE5B] p-3 md:p-1 md:text-sm xl:text-base"
                     : "font-semibold text-base text-white/85 p-3 md:p-1 md:text-sm xl:text-base"
                 }
@@ -122,7 +134,11 @@ function Header() {
                   y: 0,
                   transition: { duration: 0.2, ease: "easeInOut" },
                 }}
-                className="font-semibold text-base text-white/85 p-3 md:p-1 md:text-sm xl:text-base"
+                className={
+                  pathname == "/#skills"
+                    ? "font-semibold text-base text-[#FFDE5B] p-3 md:p-1 md:text-sm xl:text-base"
+                    : "font-semibold text-base text-white/85 p-3 md:p-1 md:text-sm xl:text-base"
+                }
               >
                 Skills
               </motion.li>
@@ -138,7 +154,11 @@ function Header() {
                   y: 0,
                   transition: { duration: 0.2, ease: "easeInOut" },
                 }}
-                className="font-semibold text-base text-white/85 p-3 md:p-1 md:text-sm xl:text-base"
+                className={
+                  pathname == "/#casestudies"
+                    ? "font-semibold text-base text-[#FFDE5B] p-3 md:p-1 md:text-sm xl:text-base"
+                    : "font-semibold text-base text-white/85 p-3 md:p-1 md:text-sm xl:text-base"
+                }
               >
                 Case Studies
               </motion.li>

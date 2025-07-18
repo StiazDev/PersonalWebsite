@@ -62,9 +62,9 @@ export default function Home() {
                   I am Hasan Khan, I am a Full-Stack Developer who ships within weeks
                 </h1>
                 <p className="text-white/85 font-normal text-base leading-[165%] text-pretty tracking-wider md:text-sm xl:text-base 2xs:text-base ">
-                  I like to blitz scale the softwares or features I work on, I believe that spending
-                  months on something that might has a possibility to not be as great to the company
-                  is a waste of time & resources.
+                  I like to blitz-scale the software or features I work on. I believe that spending
+                  months on something that might have a possibility not to be as great to the
+                  company It is a waste of time & resources.
                 </p>
               </div>
             </div>
